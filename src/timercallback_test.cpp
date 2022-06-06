@@ -48,12 +48,10 @@ TimerCallbackTest::TimerCallbackTest(
     std::bind(&TimerCallbackTest::timerCallbackDummy, this);
 
   // This fails at runtime
-  timer_dummy_ = rclcpp::create_timer(
-    this, get_clock(), period_ns, cb);
+  timer_dummy_ = rclcpp::create_timer(this, get_clock(), period_ns, cb);
 
   // This works fine
-  timer_dummy_ = rclcpp::create_timer(
-    this, get_clock(), period_ns, std::bind(&TimerCallbackTest::timerCallbackDummy, this));
+  timer_dummy_ = rclcpp::create_timer(this, get_clock(), period_ns, std::bind(&TimerCallbackTest::timerCallbackDummy, this));
 }
 
 void TimerCallbackTest::timerCallbackDummy(){std::cout << "called" << std::endl;}
