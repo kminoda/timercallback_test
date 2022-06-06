@@ -12,19 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <memory>
-#include <chrono>
-#include <fstream>
 #include <iostream>
-#include <mutex>
-#include <queue>
-#include <string>
-#include <vector>
-#include <cmath>
-#include <cassert>
-#include <filesystem>
-#include <sys/stat.h>
-
 #include "rclcpp/rclcpp.hpp"
 
 class TimerCallbackTest : public rclcpp::Node
